@@ -1,0 +1,82 @@
+body {
+    background: var(--background, #12180C);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    font-size: 9.8px;
+}
+
+.pfp {
+    width: 16.1875rem;
+    height: 16.1875rem;
+    flex-shrink: 0;
+}
+
+.cum-title {
+    color: var(--text, #FAFCF8);
+    font-family: Inknut Antiqua;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+#ta-da-button {
+    width: 32.3125rem;
+    height: 6.25rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: var(--buttons-primary, #69C611);
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito Sans;
+    font-size: 2.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.contenedor-cum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  font-size: 1.6rem;
+  animation: confetti-fall linear 5s infinite;
+}
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100%) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(180deg);
+  }
+}

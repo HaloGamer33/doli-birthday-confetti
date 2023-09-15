@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Inter&family=Nunito+Sans:opsz@6..12&display=swap"
+        rel="stylesheet">
+    <title>Doli Birthday</title>
+</head>
+
+<body>
+    <div class="contenedor-cum">
+        <div class="cartita">
+            <img class="pfp" src="Images/pfp.png" alt="Green doggo">
+            <h1 class="cum-title">Cum pleaños</h1>
+            <button id="ta-da-button">Click</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        const audio = new Audio("Sounds/ta-da.mp3");
+        const button = document.getElementById("ta-da-button");
+        button.addEventListener("click", () => {
+            audio.play();
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                startVelocity: 50,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+
+</html>
